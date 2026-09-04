@@ -21,23 +21,27 @@
 
 ---
 
-## 📥 Guia de Instalação no Celular (Flashing Guide)
+## 📥 Guia de Instalação e Downloads
 
-### 📋 Arquivos Necessários:
-1. **Recovery:** [OrangeFox Recovery](https://orangefox.download/device/raphael) com suporte a Retrofit Dynamic Partitions.
-2. **Script Retrofit Dynamic:** `legacy to retrofit dynamic by @raphael_alpha.zip`
-3. **Firmware:** Firmware MIUI Global V12.5.2.0 (`fw_raphael_miui_RAPHAELGlobal_V12.5.2.0.RFKMIXM_edbf5f63e8_11.0.zip`).
-4. **ROM:** `crDroidAndroid-13.0-*-raphael-v9.20.zip` ([Download no Gofile](https://gofile.io/d/p5suslGb)).
-5. **GApps (Opcional):** [NikGapps](https://nikgapps.com/) (Basic/Core para Android 13) - caso queira serviços Google e Play Store.
-6. **DFE (Opcional):** `Disable_Dm-Verity_ForceEncrypt.zip` (se desejar manter a memória interna sem criptografia).
+### 📦 Links Diretos dos Arquivos Necessários:
+
+| Arquivo | Descrição | Link para Download |
+| :--- | :--- | :--- |
+| 🦊 **OrangeFox Recovery** | Recovery R11.3 Unified Unofficial com suporte a Retrofit Dynamic Partitions | [Baixar no Gofile](https://gofile.io/d/ViAUVw29) |
+| 🔄 **Script Retrofit Dynamic** | Conversor de partições Legacy para Dynamic Partitions | [Baixar no Gofile](https://gofile.io/d/xHIgmhrp) |
+| 📶 **Firmware MIUI 12.5.2** | Firmware Oficial MIUI Global Android 11 para Raphael | [Baixar no Gofile](https://gofile.io/d/iMakeCes) |
+| 📱 **ROM crDroid Raphael Edition** | ROM completa Android 13 com todas as melhorias e KernelSU | [Baixar no Gofile](https://gofile.io/d/p5suslGb) |
+| 🛡️ **KernelSU APK (v0.9.5)** | Gerenciador do KernelSU standalone (já vem na ROM) | [Baixar no Gofile](https://gofile.io/d/vUpOHP4z) |
+| 🔓 **DFE (Disable Dm-Verity)** | Script de desencriptação opcional | [Baixar no Gofile](https://gofile.io/d/0aJpF663) |
+| 🌐 **NikGapps (Opcional)** | Pacote de Google Apps e Play Store (Basic/Core para A13) | [Site Oficial NikGapps](https://nikgapps.com/) |
 
 ---
 
-### 📲 Passo a Passo de Instalação Manual (OrangeFox / TWRP):
+### 📲 Passo a Passo de Instalação (OrangeFox / TWRP):
 
 #### Passo 1: Converter para Partições Dinâmicas (Retrofit)
 1. Reinicie no **OrangeFox Recovery**.
-2. Vá em **Install** e instale o arquivo `legacy to retrofit dynamic by @raphael_alpha.zip`.
+2. Vá em **Install** e instale o [Script Retrofit Dynamic](https://gofile.io/d/xHIgmhrp).
 3. Vá em **Wipe > Advanced Wipe** e marque:
    - [X] Dalvik / ART Cache
    - [X] Cache
@@ -48,65 +52,50 @@
 
 #### Passo 2: Instalar Firmware e ROM
 1. Quando o Recovery reiniciar, vá em **Install**.
-2. Instale o **Firmware MIUI 12.5.2 Global**.
-3. Em seguida, instale o arquivo da **ROM crDroid Raphael Edition (`.zip`)**.
+2. Instale o [Firmware MIUI 12.5.2 Global](https://gofile.io/d/iMakeCes).
+3. Em seguida, instale o arquivo da [ROM crDroid Raphael Edition](https://gofile.io/d/p5suslGb).
 
 #### Passo 3: GApps e DFE (Opcionais)
-1. *(Opcional)* Se desejar os serviços do Google, instale o **NikGapps**.
-2. *(Opcional)* Se não quiser encriptação forçada, instale o **Disable_Dm-Verity_ForceEncrypt.zip**.
+1. *(Opcional)* Se desejar os serviços do Google e Play Store, instale o **NikGapps**.
+2. *(Opcional)* Se não quiser encriptação forçada, instale o [Disable_Dm-Verity_ForceEncrypt](https://gofile.io/d/0aJpF663).
 
 #### Passo 4: Format Data e Inicialização
 1. Vá em **Wipe > Format Data**.
 2. Digite `yes` e confirme no botão verde.
 3. Toque em **Reboot System** e aproveite sua **crDroid Raphael Edition**!
 
-> 💡 **Dica de Instalação Rápida via PC:** Na pasta [`tools/`](./tools) você encontra o script `flash_raphael.bat` que automatiza todos esses envios via ADB Sideload automaticamente pelo computador!
+> 💡 **Automação via PC:** Na pasta [`tools/`](./tools) você encontra o script `flash_raphael.bat` que automatiza esses envios via ADB Sideload com 1 clique pelo Windows!
 
 ---
 
 ## 🛠️ Como Compilar a ROM em Qualquer Servidor (Build Guide)
 
-### 1. Instalar dependências no Ubuntu 22.04 / 24.04:
 ```bash
+# 1. Instalar dependências
 sudo apt update && sudo apt install -y bc bison build-essential ccache curl flex g++-multilib gcc-multilib git git-lfs gnupg gperf imagemagick lib32readline-dev lib32z1-dev libelf-dev liblz4-tool libncurses5 libncurses5-dev libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev python3 openjdk-11-jdk
-```
 
-### 2. Instalar o utilitário `repo`:
-```bash
+# 2. Instalar repo
 mkdir -p ~/.bin && curl https://storage.googleapis.com/git-repo-downloads/repo > ~/.bin/repo && chmod a+x ~/.bin/repo && export PATH=~/.bin:$PATH
-```
 
-### 3. Inicializar a árvore do crDroid 13:
-```bash
+# 3. Inicializar árvore crDroid 13
 mkdir -p /mnt/android && cd /mnt/android
 repo init -u https://github.com/crdroidandroid/android.git -b 13.0 --git-lfs
-```
 
-### 4. Puxar os Manifestos Customizados desta Edição:
-```bash
+# 4. Baixar Manifestos Customizados desta Edição
 git clone https://github.com/jairorossi/crDroid-Raphael-Edition.git .repo/local_manifests
-```
 
-### 5. Sincronizar os Repositórios:
-```bash
+# 5. Sincronizar Repositórios
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
-```
 
-### 6. Aplicar os Patches no Framework:
-```bash
+# 6. Aplicar Patches no Framework
 cd /mnt/android/frameworks/base
 git am /mnt/android/.repo/local_manifests/patches/*.patch || true
 cd /mnt/android
-```
 
-### 7. Iniciar a Compilação:
-```bash
+# 7. Compilar
 source build/envsetup.sh
 brunch raphael
 ```
-
-Ao finalizar, a ROM flashável estará pronta em:
-`/mnt/android/out/target/product/raphael/crDroidAndroid-13.0-*-raphael-v9.20.zip`
 
 ---
 
