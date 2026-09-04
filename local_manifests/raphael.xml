@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- crDroid 13 Raphael Edition (Xiaomi Mi 9T Pro / Redmi K20 Pro) by Jairo Rossi -->
+
+  <!-- Remocoes de repositorios padrao para substituicao -->
+  <remove-project name="crdroidandroid/android_device_xiaomi_raphael" />
+  <remove-project name="crdroidandroid/android_hardware_xiaomi" />
+  <remove-project name="crdroidandroid/android_vendor_addons" />
+  <remove-project name="crdroidandroid/android_packages_apps_crDroidSettings" />
+  <remove-project name="crdroidandroid/android_packages_apps_Settings" />
+  <remove-project name="crdroidandroid/android_packages_services_Telephony" />
+  <remove-project name="crdroidandroid/android_packages_services_Mms" />
+  <remove-project name="crdroidandroid/android_build" />
+
+  <!-- Repositorios Customizados Jairo Edition -->
+  <project name="jairorossi/android_device_xiaomi_raphael" path="device/xiaomi/raphael" remote="github" revision="13.0" />
+  <project name="jairorossi/android_hardware_xiaomi" path="hardware/xiaomi" remote="github" revision="13.0" />
+  <project name="jairorossi/android_vendor_addons" path="vendor/addons" remote="github" revision="13.0" />
+  <project name="jairorossi/android_packages_apps_crDroidSettings" path="packages/apps/crDroidSettings" remote="github" revision="13.0" />
+  <project name="jairorossi/android_packages_apps_Settings" path="packages/apps/Settings" remote="github" revision="13.0" />
+  <project name="jairorossi/android_packages_services_Telephony" path="packages/services/Telephony" remote="github" revision="13.0" />
+  <project name="jairorossi/android_packages_services_Mms" path="packages/services/Mms" remote="github" revision="13.0" />
+  <project name="jairorossi/android_build" path="build/make" remote="github" revision="13.0" />
+  <project name="jairorossi/android_packages_apps_KernelSU" path="packages/apps/KernelSU" remote="github" revision="13.0" />
+
+  <!-- Kernel & Blobs Proprietarios -->
+  <project name="crdroidandroid/android_kernel_xiaomi_sm8150" path="kernel/xiaomi/sm8150" remote="github" revision="13.0-raphael" />
+  <project name="crdroidandroid/proprietary_vendor_xiaomi_raphael" path="vendor/xiaomi/raphael" remote="crdroid-gitlab" revision="13.0" />
+  <project name="crdroidandroid/android_vendor_miuicamera" path="vendor/xiaomi/miuicamera" remote="crdroid-gitlab" revision="leica-5.0-raphael" />
+  <project name="crdroidandroid/packages_apps_KProfiles" path="packages/apps/KProfiles" remote="github" revision="13.0" />
+</manifest>
