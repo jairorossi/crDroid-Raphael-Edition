@@ -29,7 +29,7 @@
 
 | Arquivo | Descrição | Link para Download |
 | :--- | :--- | :--- |
-| 🦊 **OrangeFox Recovery** | Recovery R11.3 Unified Unofficial com suporte a Retrofit Dynamic Partitions | [Baixar no Gofile](https://gofile.io/d/ViAUVw29) |
+| 🦊 **OrangeFox Recovery** | Recovery R11.3 Unified Unofficial com suporte a Retrofit Dynamic Partitions | [Baixar no Gofile](https://gofile.io/d/BWRO1wSW) |
 | 🔄 **Script Retrofit Dynamic** | Conversor de partições Legacy para Dynamic Partitions | [Baixar no Gofile](https://gofile.io/d/xHIgmhrp) |
 | 📶 **Firmware MIUI 12.5.2** | Firmware Oficial MIUI Global Android 11 para Raphael | [Baixar no Gofile](https://gofile.io/d/iMakeCes) |
 | 📱 **ROM crDroid Raphael Edition** | ROM completa Android 13 com todas as melhorias e KernelSU | [Baixar no Gofile](https://gofile.io/d/EQ7Rfbjq) |
