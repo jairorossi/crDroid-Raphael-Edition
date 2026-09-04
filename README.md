@@ -30,7 +30,7 @@
 | 🦊 **OrangeFox Recovery** | Recovery R11.3 Unified Unofficial com suporte a Retrofit Dynamic Partitions | [Baixar no Gofile](https://gofile.io/d/ViAUVw29) |
 | 🔄 **Script Retrofit Dynamic** | Conversor de partições Legacy para Dynamic Partitions | [Baixar no Gofile](https://gofile.io/d/xHIgmhrp) |
 | 📶 **Firmware MIUI 12.5.2** | Firmware Oficial MIUI Global Android 11 para Raphael | [Baixar no Gofile](https://gofile.io/d/iMakeCes) |
-| 📱 **ROM crDroid Raphael Edition** | ROM completa Android 13 com todas as melhorias e KernelSU | [Baixar no Gofile](https://gofile.io/d/p5suslGb) |
+| 📱 **ROM crDroid Raphael Edition** | ROM completa Android 13 com todas as melhorias e KernelSU | [Baixar no Gofile](https://gofile.io/d/EQ7Rfbjq) |
 | 🛡️ **KernelSU APK (v0.9.5)** | Gerenciador do KernelSU standalone (já vem na ROM) | [Baixar no Gofile](https://gofile.io/d/vUpOHP4z) |
 | 🔓 **DFE (Disable Dm-Verity)** | Script de desencriptação opcional | [Baixar no Gofile](https://gofile.io/d/0aJpF663) |
 | 🌐 **NikGapps (Opcional)** | Pacote de Google Apps e Play Store (Basic/Core para A13) | [Site Oficial NikGapps](https://nikgapps.com/) |
@@ -53,7 +53,7 @@
 #### Passo 2: Instalar Firmware e ROM
 1. Quando o Recovery reiniciar, vá em **Install**.
 2. Instale o [Firmware MIUI 12.5.2 Global](https://gofile.io/d/iMakeCes).
-3. Em seguida, instale o arquivo da [ROM crDroid Raphael Edition](https://gofile.io/d/p5suslGb).
+3. Em seguida, instale o arquivo da [ROM crDroid Raphael Edition](https://gofile.io/d/EQ7Rfbjq).
 
 #### Passo 3: GApps e DFE (Opcionais)
 1. *(Opcional)* Se desejar os serviços do Google e Play Store, instale o **NikGapps**.
