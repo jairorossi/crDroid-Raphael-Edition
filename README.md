@@ -3,20 +3,22 @@
 
 ---
 
-## ✨ Recursos e Melhorias Exclusivas desta Edição
+## ✨ Recursos e Melhorias Exclusivas desta Edição (Changelog)
 
 1. 🛡️ **KernelSU Integrado Nativo:**
    - Aplicativo KernelSU embutido diretamente como app de sistema em `/system/app/KernelSU/`.
 2. 🟢 **Correção Definitiva do Leitor de Digitais (FOD Goodix):**
-   - Luz do sensor óptico configurada para **Verde Sólido (`#ff00ff00`)** (a mesma correção oficial do Android 14 que elimina falhas de leitura e cadastro).
-   - **Brilho Dinâmico:** A tela sobe automaticamente para **60% de brilho** sempre que a digital for solicitada para garantir 100% de precisão.
+   - **Fix no Cadastro (Enrollment):** Janela de cadastro sobe automaticamente para **100% de brilho (`BRIGHTNESS_OVERRIDE_FULL`)**, eliminando de vez o erro de *"A configuração da impressão digital expirou"*.
+   - **Iluminação Verde Sólida (`#ff00ff00`):** Máxima precisão e contraste para a mini-câmera óptica sob a tela.
+   - **Brilho Dinâmico no Desbloqueio:** Elevação automática para **60% de brilho** ao solicitar autenticação biométrica.
+   - **Alinhamento do Sensor:** Coordenada física Y recalibrada para **`2026px`** e raio UDFPS adicionado ao overlay do Settings.
 3. 📸 **Fix de Cores no Google Fotos (HDR/WCG):**
-   - SurfaceFlinger configurado para desativar wide color gamut forçado, eliminando cores lavadas ao visualizar fotos.
+   - SurfaceFlinger configurado para desativar wide color gamut forçado, eliminando cores lavadas e mantendo tons reais.
 4. 🔒 **Play Integrity Spoofing Desativado por Padrão:**
-   - Evita conflitos com módulos Magisk / KernelSU de integridade.
+   - Evita conflitos com módulos Magisk / KernelSU de integridade e assinatura.
 5. 🎨 **Identidade Visual Personalizada:**
    - Logo customizado em *Configurações > Sobre o Dispositivo*.
-   - Nome oficial da build: `crDroid Raphael Edition - by Jairo`.
+   - Nome oficial da build: `crDroid Raphael Edition - by Jairo` (adeus texto *"Desconhecido"*).
    - Nova Bootanimation (`Cutsbootanimation`).
 
 ---
